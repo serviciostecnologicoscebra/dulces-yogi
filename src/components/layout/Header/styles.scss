@@ -1,0 +1,5 @@
+.yogi-header {
+  .hover-underline { position: relative; }
+  .hover-underline::after { content: ""; position: absolute; inset: auto 0 -5px; height: 1px; background: currentColor; transform: scaleX(0); transition: transform .2s ease; }
+  .hover-underline:hover::after, .hover-underline:focus-visible::after { transform: scaleX(1); }
+}

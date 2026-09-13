@@ -1,0 +1,68 @@
+@use "components/layout/Header/styles" as headerStyles;
+@use "components/layout/Footer/styles" as footerStyles;
+@use "components/common/Breadcrumbs/styles" as breadcrumbStyles;
+@use "components/common/JsonLd/styles" as jsonLdStyles;
+@use "features/home/components/HomeView/styles" as homeStyles;
+@use "features/products/components/ProductCard/styles" as productCardStyles;
+@use "features/products/components/CatalogView/styles" as catalogStyles;
+@use "features/clients/components/ClientsView/styles" as clientStyles;
+@use "features/about/components/AboutView/styles" as aboutStyles;
+@use "features/contact/components/ContactForm/styles" as contactFormStyles;
+@use "features/contact/components/ContactView/styles" as contactViewStyles;
+@use "features/cart/components/CartDrawer/styles" as cartDrawerStyles;
+@use "features/cart/components/AddToCart/styles" as addToCartStyles;
+@use "providers/AppProviders/styles" as providerStyles;
+@use "providers/HydratedQueryBoundary/styles" as hydratedQueryStyles;
+@import "tailwindcss";
+
+@theme {
+  --color-yogi-lilac: #cdb4db;
+  --color-yogi-pink-soft: #ffc8dd;
+  --color-yogi-pink: #ffafcc;
+  --color-yogi-blue-soft: #bde0fe;
+  --color-yogi-blue: #a2d2ff;
+  --color-yogi-black: #050505;
+  --color-yogi-white: #ffffff;
+}
+
+:root {
+  --yogi-lilac: #cdb4db;
+  --yogi-pink-soft: #ffc8dd;
+  --yogi-pink: #ffafcc;
+  --yogi-blue-soft: #bde0fe;
+  --yogi-blue: #a2d2ff;
+  --yogi-black: #050505;
+  --yogi-white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: white; color: var(--yogi-black); font-family: var(--font-montserrat), Arial, sans-serif; font-size: 1rem; line-height: 1.5; overflow-x: hidden; }
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+:focus-visible { outline: 3px solid var(--yogi-blue); outline-offset: 3px; }
+
+.display-title { font-size: clamp(2.45rem, 7vw, 5.6rem); font-weight: 900; line-height: .92; letter-spacing: -.055em; text-transform: uppercase; }
+.section-title { font-size: clamp(1.8rem, 4vw, 3.35rem); font-weight: 900; line-height: .98; letter-spacing: -.045em; text-transform: uppercase; }
+.eyebrow { display: flex; align-items: center; gap: .8rem; font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.eyebrow::after { content: ""; width: 42px; height: 1px; background: currentColor; }
+.yogi-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; border: 1px solid black; background: black; padding: .75rem 1.4rem; color: white; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: background-color .2s ease, color .2s ease; }
+.yogi-button:hover { background: white; color: black; }
+.yogi-button--outline { background: white; color: black; }
+.yogi-button--outline:hover { background: black; color: white; }
+.yogi-button--light { border-color: white; background: transparent; color: white; }
+.yogi-button--light:hover { background: white; color: black; }
+.yogi-input { min-height: 44px; width: 100%; border: 1px solid black; background: white; padding: .65rem .8rem; color: black; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 600px) {
+  .display-title { font-size: clamp(2.35rem, 12vw, 4rem); }
+  .section-title { font-size: clamp(1.75rem, 8vw, 2.6rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

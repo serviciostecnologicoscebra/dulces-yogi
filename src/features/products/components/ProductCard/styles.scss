@@ -1,0 +1,8 @@
+.product-card { display: flex; flex-direction: column; min-width: 0; }
+.product-card__image { aspect-ratio: 1 / .82; }
+.product-card--compact .product-card__image { aspect-ratio: 1 / .7; }
+@media (max-width: 600px) {
+  .product-card { display: grid; grid-template-columns: 36% 1fr; }
+  .product-card__image { aspect-ratio: auto; min-height: 132px; }
+  .product-card__body { padding: .7rem; }
+}

@@ -1,0 +1,3 @@
+.home-hero__copy { background-image: radial-gradient(circle at 80% 20%, rgb(255 255 255 / 35%), transparent 35%); }
+.home-cta { background-image: radial-gradient(circle at 10% 70%, rgb(255 175 204 / 85%), transparent 22%), radial-gradient(circle at 90% 30%, rgb(205 180 219 / 70%), transparent 20%); }
+@media (max-width: 1023px) { .home-hero { grid-template-columns: 1fr; } }
