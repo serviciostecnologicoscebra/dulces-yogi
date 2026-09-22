@@ -55,7 +55,7 @@ img { max-width: 100%; }
 .yogi-button--outline:hover { background: black; color: white; }
 .yogi-button--light { border-color: white; background: transparent; color: white; }
 .yogi-button--light:hover { background: white; color: black; }
-.yogi-input { min-height: 44px; width: 100%; border: 1px solid black; background: white; padding: .65rem .8rem; color: black; }
+.yogi-input { min-height: 44px; width: 100%; border: 1px solid black; background: white; padding: .65rem 2rem; color: black; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 @media (max-width: 600px) {
